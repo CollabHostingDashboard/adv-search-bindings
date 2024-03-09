@@ -10341,7 +10341,7 @@ class MusicDownloadManager : cocos2d::CCNode, PlatformDownloadDelegate {
 	TodoReturn getAllSongs();
 	TodoReturn getCustomContentURL() = win 0x2849c0;
 	TodoReturn getDLObject(char const*);
-	TodoReturn getDownloadedSongs();
+	CCArray* getDownloadedSongs() = win 0x283450;
 	TodoReturn getDownloadProgress(int);
 	TodoReturn getMusicArtistForID(int);
 	TodoReturn getMusicObject(int);
