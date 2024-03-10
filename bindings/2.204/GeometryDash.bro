@@ -7933,7 +7933,7 @@ class GJSongBrowser : GJDropDownLayer, FLAlertLayerProtocol, TableViewCellDelega
 
 	static GJSongBrowser* create() = win 0x224e80;
 
-	TodoReturn loadPage(int) = win 0x2253c0;
+	void loadPage(int) = win 0x2253c0;
 	void onDeleteAll(cocos2d::CCObject* sender);
 	void onNextPage(cocos2d::CCObject* sender);
 	void onPrevPage(cocos2d::CCObject* sender);
@@ -7942,7 +7942,7 @@ class GJSongBrowser : GJDropDownLayer, FLAlertLayerProtocol, TableViewCellDelega
 
 	virtual bool init() = win 0x224fe0;
 	virtual void customSetup() = win 0x225080;
-	virtual TodoReturn exitLayer(cocos2d::CCObject*) = win 0x225010;
+	virtual void exitLayer(cocos2d::CCObject*) = win 0x225010;
 	virtual void FLAlert_Clicked(FLAlertLayer*, bool) = win 0x2257d0;
 	virtual TodoReturn cellPerformedAction(TableViewCell*, int, CellAction, cocos2d::CCNode*);
 	virtual TodoReturn getSelectedCellIdx();
@@ -10341,7 +10341,7 @@ class MusicDownloadManager : cocos2d::CCNode, PlatformDownloadDelegate {
 	TodoReturn getAllSongs();
 	TodoReturn getCustomContentURL() = win 0x2849c0;
 	TodoReturn getDLObject(char const*);
-	CCArray* getDownloadedSongs() = win 0x283450;
+	cocos2d::CCArray* getDownloadedSongs() = win 0x283450;
 	TodoReturn getDownloadProgress(int);
 	TodoReturn getMusicArtistForID(int);
 	TodoReturn getMusicObject(int);
